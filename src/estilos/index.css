@@ -6,8 +6,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.login-form {
-  width: 70%;
-  max-width: 300px;
-}
