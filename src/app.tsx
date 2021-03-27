@@ -1,19 +1,18 @@
 import React from 'react';
 import './estilos/app.css';
-import Login from './componentes/login';
-import FormularioIngreso from './componentes/ingreso';
+import Login from './componentes/ingreso';
+import FormIngreso from './componentes/ingreso';
 
 const App = () => {
   
   return (
     <div className="app">
       <section className="app-conteido">
-        <h3>
-          <span className="font-weight-bold">Carpinter&iacute;a</span>.com
-        </h3>
+        <h4>
+          <span className="font-weight-bold">Bienvenido al sitio de Carpinter&iacute;a</span>.com
+        </h4>
 
-        <Login />
-        <FormularioIngreso />
+        <FormIngreso />
         
       </section>
     </div>

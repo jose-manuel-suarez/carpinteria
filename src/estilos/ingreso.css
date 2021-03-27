@@ -1,49 +1,21 @@
-.form-gradient .header {
-   border-top-left-radius: .3rem;
-   border-top-right-radius: .3rem; }
 
-   .form-light .font-small {
-      font-size: 0.8rem; }
-    
-    .form-light [type="radio"] + label,
-    .form-light [type="checkbox"] + label {
-      font-size: 0.8rem; }
-    
-    .form-light [type="checkbox"] + label:before {
-      top: 2px;
-      width: 15px;
-      height: 15px; }
-    
-    .form-light input[type="checkbox"] + label:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 17px;
-      height: 17px;
-      z-index: 0;
-      border-radius: 1px;
-      margin-top: 2px;
-      -webkit-transition: 0.2s;
-      transition: 0.2s; }
-    
-    .form-light input[type="checkbox"]:checked + label:before {
-      top: -4px;
-      left: -3px;
-      width: 12px;
-      height: 22px;
-      border-style: solid;
-      border-width: 2px;
-      border-color: transparent #EB3573 #EB3573 transparent;
-      -webkit-transform: rotate(40deg);
-      -ms-transform: rotate(40deg);
-      transform: rotate(40deg);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-      -webkit-transform-origin: 100% 100%;
-      -ms-transform-origin: 100% 100%;
-      transform-origin: 100% 100%; }
-    
-    .form-light .footer {
-      border-bottom-left-radius: .3rem;
-      border-bottom-right-radius: .3rem; }
+.login-form {
+    display: inline-block;
+    width: 70%;
+    max-width: 300px;
+  }
+  
+h2 { width: 100%; margin: 50px 0 !important; position: relative; line-height: 58px; font-weight: 400;}
+h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;}
+
+.campo {
+  width: 100%;
+  margin: 40px 0;
+}
+
+.efecto{width: 100%; border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}
+.efecto ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+.efecto:focus ~ .focus-border,
+.has-content.efecto ~ .focus-border{width: 100%; transition: 0.4s;}
+.efecto ~ label{position: absolute; left: -100px; width: 100%; top: 9px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+.efecto:focus ~ label, .has-content.efecto ~ label{top: -16px; font-size: 12px; color: #3399FF; transition: 0.3s;}

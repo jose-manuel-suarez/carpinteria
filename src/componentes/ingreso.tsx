@@ -1,54 +1,36 @@
-import React from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBInput, MDBIcon, MDBBtn } from 'mdbreact';
+import React from 'react';
+
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { FacebookLoginButton } from 'react-social-login-buttons';
+
 import '../estilos/ingreso.css';
 
-const FormularioIngreso = () => {
-  return (
-    <MDBContainer>
-      <MDBRow>
-        <MDBCol md='6'>
-          <MDBCard>
-            <MDBRow className="d-flex justify-content-center">
-                <h3 className="white-text mb-3 pt-3 font-weight-bold">
-                     <strong>Ingreso al sitio</strong>
-                </h3>
-            </MDBRow>
+const FormIngreso = () => {
+    
+    return (
+        <Form className="login-form">
 
-            <MDBCardBody className='mx-4'>
+            <h2>Ingreso al sistema</h2>
 
-              <MDBInput label='Tu email' group type='text' validate />
-              <MDBInput label='Tu clave' group type='password' validate />
-              <p className="font-small grey-text d-flex justify-content-end">                
-                <a
-                  href="#!"
-                  className="dark-grey-text ml-1 font-weight-bold"
-                >
-                  Olvidé mi clave
-                </a>
-              </p>
-              
-              <MDBRow className='d-flex align-items-center mb-4'>
-                <MDBCol md='6' className='text-center'>
-                  <MDBBtn className='btn-block z-depth-1a' type="button" gradient='blue' rounded block>
-                    Ingresar
-                  </MDBBtn>
-                </MDBCol>
-                <MDBCol md='6'>
-                  <p className='font-small grey-text d-flex justify-content-end'>
-                    ¿ No est&aacute; registrado a&uacute;n?
-                    <a href='#!' className='blue-text ml-1'>Registrarme ahora</a>
-                  </p>
-                </MDBCol>
-              </MDBRow>
-            </MDBCardBody>
+            <div className="col-12 input-effect campo">
+        	    <input className="efecto" type="text"></input>
+                <label>Usuario</label>
+                <span className="focus-border"></span>
+            </div>
 
-            
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
-    </MDBContainer>
-  );
-  
-};
+            <div className="col-12 input-effect campo">
+        	    <input className="efecto" type="password"></input>
+                <label>Clave</label>
+                <span className="focus-border"></span>
+            </div>
 
-export default FormularioIngreso;
+            <button type="submit" className="text-uppercase btn-block">
+                ingresar
+                <span className="left icon icon-tablet"></span>
+            </button>
+
+        </Form>
+    );
+}
+
+export default FormIngreso;
